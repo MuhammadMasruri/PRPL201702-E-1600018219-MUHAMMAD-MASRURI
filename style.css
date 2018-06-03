@@ -1,0 +1,60 @@
+ body {
+ background: url('d.jpg');
+  font-family: sans-serif;
+  
+}
+
+h2 {
+  color: #fff;
+}
+.login {
+  padding: 1em;
+  margin: 2em auto;
+  width: 16em;
+  background: #4dd62a;
+  border-radius: 3px;
+}
+
+input[type="password"],
+input[type="text"],
+masukan{
+  padding: 8px;
+  width: 95%;
+  background: #efefef;
+  border: 0;
+  font-size: 10pt;
+  margin: 6px 0px;
+}
+
+label {
+  font-size: 10pt;
+  color: #555;
+}
+.tombol {
+  background: #3498db;
+  color: #fff;
+  font-size:19;
+  position:relative;
+  left:180;
+  font-family: sans-serif;
+  border: 2;
+  padding: 10px 8px;
+}
+
+ {margin:0; padding:0;}
+ 
+body {
+	background-color:#fff;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#FFF;
+}
+ 
+.menu-wrap {
+	background-color:#53bd84; 
+	height:50px; 
+	line-height:50px; 
+	position:relative;
+	width:770px;
+	margin:auto;
+	margin-top:80px;
+}

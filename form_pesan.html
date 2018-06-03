@@ -1,0 +1,192 @@
+
+<html lang="en">
+<head>
+<title>Form Pemesanan</title>
+<style type="text/css">
+
+</style>
+</head>
+<body background = "bg.jpg">
+<center>
+<a href="index.html">Home</a>
+<script language="JavaScript" type="text/javascript">
+function jumlah() {
+//var myForm = document.form1;
+var sototauco = 15000 * myForm.order1.value;
+var sateblenggong = 20000 * myForm.order2.value;
+var salmon = 75000 * myForm.order3.value;
+var chiken = 20000 * myForm.order4.value;
+var nasgor = 20000 * myForm.order5.value;
+var pisang = 25000 * myForm.order6.value;
+var martabak = 50000 * myForm.order7.value;
+var gurami = 75000 * myForm.order8.value;
+var kepiting = 75000 * myForm.order9.value;
+var ballsoup = 25000 * myForm.order10.value;
+var paket = 220000 * myForm.order11.value;
+var kue = 20000 * myForm.order12.value;
+var kingmanggo = 25000 * myForm.order13.value;
+var thaitea = 20000 * myForm.order14.value;
+var esteh = 3000 * myForm.order15.value;
+var airmineral = 5000 * myForm.order16.value;
+var cocacola = 10000 * myForm.order17.value;
+var jus = 10000 * myForm.order18.value;
+var hasil = sototauco+sateblenggong+salmon+chiken+nasgor+
+pisang+martabak+gurami+kepiting+ballsoup+paket+kue+kingmanggo+thaitea+esteh+airmineral+cocacola+jus;
+var jumlah = (sototauco/15000)+(sateblenggong/20000)+(salmon/75000)+(chiken/20000)+(nasgor/20000)+
+(pisang/25000)+(martabak/50000)+(gurami/75000)+(kepiting/75000)+(ballsoup/25000)+(paket/220000)+
+(kue/20000)+(kingmanggo/25000)+(thaitea/20000)+(esteh/3000)+(airmineral/5000)+(cocacola/10000)+(jus/10000);
+
+var terbayar = myForm.dibayar.value ;
+var kembalian = terbayar - hasil;
+
+
+myForm.totalbarang.value = jumlah;
+//
+if (hasil > 50000) {
+    myForm.total.value = hasil;
+    myForm.diskon.value = 20000;
+    myForm.bayar.value = hasil - eval(myForm.diskon.value);
+    myForm.kembalian1.value = terbayar - myForm.bayar.value;
+ } else {
+    myForm.total.value = hasil;
+    myForm.diskon.value = 0;
+    document.myForm.bayar.value = hasil - eval(myForm.diskon.value);
+    myForm.kembalian1.value = terbayar - myForm.bayar.value;
+ }
+
+}
+function resetForm(){
+document.form1.reset();
+}
+</script>
+<form name="myForm" method="post" action="simpan_pesan.php">
+<table border="0">	
+<tr>
+	<td> Username </td>
+	<td> : </td>
+	<td> <input type="text" name="username" placeholder=" Username" required><br></td>
+</tr>
+<tr>
+	<td> Alamat </td>
+	<td> : </td>
+	<td> <input type="text" name="alamat" placeholder=" Alamat" required></td>
+</tr>
+<tr>
+	<td> Tanggal </td>
+	<td> : </td>
+	<td> <input type="date" name=" tanggal" required ></td>
+</tr>
+</table>
+
+<table border="2" cellspacing=0 cellpadding=5 >
+<colgroup align="center">
+<colgroup align="center">
+<colgroup align="center">
+<thead valign="middle">
+<tr>
+<th width="35"><font color="black" size="4">No</font>
+<th width="200"><font color="black" size="4">Makanan/Minuman</font>
+<th width="180"><font color="black" size="4">Harga Satuan</font>
+<th width="100"><font color="black" size="4">Pesan</font>
+</tr>
+<tbody>
+<tr>
+<td>1<td>SOTO Tauco Khas Tegal<td><input type="text" value="15000" disabled="true"/><td>
+<input  type="text"  name="order1" placeholder="0" onChange="jumlah()"/>
+</tr>
+<tr>
+<td>2<td>Sate Blengong Khas Brebes<td><input type="text" value="20000" disabled="true"/><td>
+<input  type="text"  name="order2" value="0" onChange="jumlah()" />
+</tr>
+<tr>
+<td>3<td>SALMON SEEDED MUSTARD<td><input  type="text"   value="75000" disabled="true"/> <td>
+<input  type="text"  name="order3" value="0" onChange="jumlah()"/>
+</tr>
+<tr>
+<td>4<td>CHICKEN HOT PLATE<td><input  type="text"   value="20000" disabled="true"/>
+<td><input  type="text"  name="order4" value="0" onChange="jumlah()" />
+</tr>
+<tr>
+<td>5<td>NASGOR SOMETHING HOT PLATE<td><input  type="text"   value="20000" disabled="true"/> <td>
+<input  type="text"  name="order5" value="0" onChange="jumlah()"/>
+</tr>
+<tr>
+<td>6<td>Pisang Nugget<td><input  type="text"   value="25000" disabled="true"/> <td>
+<input  type="text"  name="order6" value="0" onChange="jumlah()"/>
+</tr>
+<tr>
+<td>7<td>Martabak Pelangi dan Mozarella<td><input  type="text"   value="50000" disabled="true"/> <td>
+<input  type="text"  name="order7" value="0" onChange="jumlah()"/>
+</tr>
+<tr>
+<td>8<td>Ikan Gurami <td><input  type="text"   value="60000" disabled="true"/> <td>
+<input  type="text"  name="order8" value="0" onChange="jumlah()"/>
+</tr>
+<tr>
+<td>9<td>Kepiting Saus Asam Manis<td><input  type="text"   value="75000" disabled="true"/> <td>
+<input  type="text"  name="order9" value="0" onChange="jumlah()"/>
+</tr>
+<tr>
+<td>10<td>Ball Soup<td><input  type="text"   value="25000" disabled="true"/> <td>
+<input  type="text"  name="order10" value="0" onChange="jumlah()"/>
+</tr>
+<tr>
+<td>11<td>Paket Komplit Mantap<td><input  type="text"   value="220000" disabled="true"/> <td>
+<input  type="text"  name="order11" value="0" onChange="jumlah()"/>
+</tr>
+<tr>
+<td>12<td>KUE RAINBOW CAKE<td><input  type="text"   value="20000" disabled="true"/> <td>
+<input  type="text"  name="order12" value="0" onChange="jumlah()"/>
+</tr>
+<tr>
+<td>13<td>KING MANGO THAI<td><input  type="text"   value="25000" disabled="true"/> <td>
+<input  type="text"  name="order13" value="0" onChange="jumlah()"/>
+</tr>
+<tr>
+<td>14<td>Thai Tea<td><input  type="text"   value="20000" disabled="true"/> <td>
+<input  type="text"  name="order14" value="0" onChange="jumlah()"/>
+</tr>
+<tr>
+<td>15<td>ES TEH <td><input  type="text"   value="3000" disabled="true"/> <td>
+<input  type="text"  name="order15" value="0" onChange="jumlah()"/>
+</tr>
+<tr>
+<td>16<td>AIR MINERAL<td><input  type="text"   value="5000" disabled="true"/> <td>
+<input  type="text"  name="order16" value="0" onChange="jumlah()"/>
+</tr>
+<tr>
+<td>17<td>COCA COLA<td><input  type="text"   value="10000" disabled="true"/> <td>
+<input  type="text"  name="order17" value="0" onChange="jumlah()"/>
+</tr>
+<tr>
+<td>18<td>JUS BUAH SEGAR<td><input  type="text"   value="20000" disabled="true"/> <td>
+<input  type="text"  name="order18" value="0" onChange="jumlah()"/>
+</tr>
+<tr>
+<td colspan=3 align="right">Jumlah Total<td><input type="text"  id="total" name="total" value="" />
+</tr>
+<tr>
+<td colspan=3 align="right">Jumlah Total Barang<td><input type="text"  id="totalbarang" name="totalbarang" value="" />
+</tr>
+<tr>
+<td colspan=3 align="right">Diskon<td><input  type="text"  name="diskon"  />
+</tr>
+<tr>
+<td colspan=3 align="right">Jumlah Bayar<td><input type="text" name="bayar" value="" />
+</tr>
+<tr>
+<td colspan=3 align="right">Uang Anda<td><input type="text" name="dibayar" id="dibayar" placeholder="Uang Anda" onChange="jumlah()" />
+</tr>
+
+<tr>
+<td colspan=3 align="right">Kembalian<td><input type="text" name="kembalian1" id="kembalian1" value="" />
+</tr>
+</table>
+<br/>
+<input type="reset" value="CANCEL" onClick="resetForm()" />
+<input type="submit" value="PESAN" />
+</form>
+
+
+</body>
+</html> 
